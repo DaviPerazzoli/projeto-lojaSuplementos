@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="estilos-login/style.css">
+    <link rel="stylesheet" href="estilos-login/media-queries.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Celular */
+        @media screen and (max-width: 768px){
+            section#login{
+                width: 400px;
+                height: 90vh;
+            }
+        }
+
+        /* Tablets */
+        @media screen and (min-width:768px) and (max-width: 992px){
+            section#login{
+                height: 700px;
+            }
+
+            section#login #formulario{
+                flex: 1 1;
+            }
+        }
+        
+        /* Desktop */
+        @media screen and (min-width: 992px){
+            section#login{
+                height: 700px;
+            } 
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="login">
+            <div id="imagem">
+            </div>
+            <div id="formulario">
+                <h1>Cadastro</h1>
+                <p>Seja bem-vindo(a). Faça o seu cadastro para criar sua conta e navegar por nossos produtos</p>
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    
+                    <div class="campo"><span class="material-icons">person</span>
+                        <input type="text" name="nome" id="inome" required autocomplete="name" placeholder="nome">
+                    </div>
+
+                    <div class="campo"><span class="material-icons">description</span>
+                        <input type="text" name="CPF" id="iCPF" required placeholder="CPF">
+                    </div>
+
+                    <div class="campo"><span class="material-icons">mail</span>
+                        <input type="email" name="email" id="iemail" required autocomplete="email" placeholder="email">
+                    </div>
+
+                    <div class="campo">
+                        <span class="material-icons">vpn_key</span>
+                        <input type="password" name="senha" id="isenha" required placeholder="senha" autocomplete="current-password" minlength="3" maxlength="20">
+                    </div>
+
+                    <div class="campo">
+                        <span class="material-icons">vpn_key</span>
+                        <input type="password" name="csenha" id="icsenha" required placeholder="confirmar senha" autocomplete="current-password" minlength="3" maxlength="20">
+                    </div>
+
+                    <div class="campo"><span class="material-icons">location_on</span>
+                        <input type="text" name="UF" id="iUF" required placeholder="UF" minlength="2" maxlength="2">
+                    </div>
+
+                    <div class="campo"><span class="material-icons">location_on</span>
+                        <input type="text" name="cidade" id="icidade" required placeholder="cidade">
+                    </div>
+
+                    <div class="campo"><span class="material-icons">location_on</span>
+                        <input type="text" name="bairro" id="ibairro" required placeholder="bairro">
+                    </div>
+
+                    <div class="campo"><span class="material-icons">location_on</span>
+                        <input type="text" name="rua" id="irua" required placeholder="rua">
+                    </div>
+
+                    <div class="campo"><span class="material-icons">location_on</span>
+                        <input type="number" name="numero" id="inumero" required placeholder="número">
+                    </div>
+
+                    <div class="campo"><span class="material-icons">location_on</span>
+                        <input type="text" name="complemento" id="icomplemento" placeholder="complemento (opcional)">
+                    </div>
+
+                    <input type="submit" value="Cadastrar">
+                    <a href="index.html" class="botao">Já tem uma conta? (Fazer login)</a>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
